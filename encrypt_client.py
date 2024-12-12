@@ -1,12 +1,25 @@
-from cryptography.fernet import Fernet
+import subprocess
 
-# Replace this key with the key received from the /get_key endpoint
-key = 'IJ-lCg5DE59yIRX4rfvuaXb6HGwOWGtGlxeWFMYyroQ='
-cipher_suite = Fernet(key)
+# The curl command
+curl_command = [
+    'curl',
+    'http://127.0.0.1:5000/get_message'
+]
 
-# Encrypt the message
-message = ("English texts for beginners")
-encrypted_message = cipher_suite.encrypt(message.encode())
+# Run the command
+result = subprocess.run(curl_command, capture_output=True, text=True)
 
-# Print the encrypted message in bytes
-print(encrypted_message)
+# Print the output of the curl command
+print(result.stdout)Aimport subprocess
+
+# The curl command
+curl_command = [
+    'curl',
+    'http://127.0.0.1:5000/get_message'
+]
+
+# Run the command
+result = subprocess.run(curl_command, capture_output=True, text=True)
+
+# Print the output of the curl command
+print(result.stdout)A
