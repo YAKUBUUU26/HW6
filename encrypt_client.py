@@ -5,7 +5,7 @@ key = 'IJ-lCg5DE59yIRX4rfvuaXb6HGwOWGtGlxeWFMYyroQ='
 cipher_suite = Fernet(key)
 
 # Encrypt the message
-message = ("English texts for beginners to practice reading and comprehension ")
+message = ("")
 encrypted_message = cipher_suite.encrypt(message.encode())
 
 # Print the encrypted message in bytes
