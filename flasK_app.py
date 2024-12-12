@@ -49,7 +49,7 @@ def add_user():
     users[email] = {"email": email, "age": age, "api_key": api_key}
     save_users()
     return jsonify({
-    "message": "User added successfully",
+        "message": "User added successfully",
     "api_key": api_key
 }), 201
 
