@@ -48,8 +48,10 @@ def add_user():
     # Add user to the database
     users[email] = {"email": email, "age": age, "api_key": api_key}
     save_users()
-    return jsonify({"message": "User added successfully", "api_key": api_key}), 201
-
+    return jsonify({
+    "message": "User added successfully",
+    "api_key": api_key
+}), 201
 
 @app.route('/users/<email>', methods=['GET'])
 def get_user(email):
