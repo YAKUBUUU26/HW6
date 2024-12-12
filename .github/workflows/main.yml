@@ -8,7 +8,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *"  # Nightly run at midnight
+    - cron: "0 0 * * *"  
 
 jobs:
   test-python:
